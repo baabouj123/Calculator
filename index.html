@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f4358bea02.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calc-container">
+        <p class="calc-title">Calculator</p>
+        <div class="calc-screen">
+          <p id="calc-operations"></p>
+          <p id="calc-result"></p>
+        </div>
+        <form class="calc-form" name="calculator">
+          <input
+            type="button"
+            value="C"
+            class="calc-clear"
+            onclick="
+              document.getElementById('calc-result').innerHTML ='';
+              document.getElementById('calc-operations').innerHTML ='';
+              document.getElementById('calc-operations').style.opacity =1;
+              document.getElementsByName('calculator').operation = ''; 
+            "
+          />
+          <input type="button" value="(" onclick="onClick('(')" />
+          <input type="button" value=")" onclick="onClick(')')" />
+          <input type="button" value="%" onclick="onClick('%')" />
+          <input type="button" value="1" onclick="onClick('1')" />
+          <input type="button" value="2" onclick="onClick('2')" />
+          <input type="button" value="3" onclick="onClick('3')" />
+          <input type="button" value="+" onclick="onClick('+')" />
+          <input type="button" value="4" onclick="onClick('4')" />
+          <input type="button" value="5" onclick="onClick('5')" />
+          <input type="button" value="6" onclick="onClick('6')" />
+          <input type="button" value="-" onclick="onClick('-')" />
+          <input type="button" value="7" onclick="onClick('7')" />
+          <input type="button" value="8" onclick="onClick('8')" />
+          <input type="button" value="9" onclick="onClick('9')" />
+          <input type="button" value="*" onclick="onClick('*')" />
+          <input type="button" value="/" onclick="onClick('/')" />
+          <input type="button" value="0" onclick="onClick('0')" />
+          <input type="button" value="." onclick="onClick('.')" />
+          <input type="button" value="=" onclick="calculate()" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
