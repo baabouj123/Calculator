@@ -11,7 +11,8 @@ const calculate = () => {
   if (calculator.operation) {
     let result = document.getElementById("calc-result");
     try {
-      result.innerText = eval(calculator.operation);
+      const operation = calculator.operation.replace(/√/g, "Math.sqrt");
+      result.innerText = eval(operation);
       let content = document.getElementById("calc-operations");
       content.style.opacity = 0.6;
     } catch {

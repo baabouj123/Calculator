@@ -27,17 +27,7 @@
           <p id="calc-result"></p>
         </div>
         <form class="calc-form" name="calculator">
-          <input
-            type="button"
-            value="C"
-            class="calc-clear"
-            onclick="
-              document.getElementById('calc-result').innerHTML ='';
-              document.getElementById('calc-operations').innerHTML ='';
-              document.getElementById('calc-operations').style.opacity =1;
-              document.getElementsByName('calculator').operation = ''; 
-            "
-          />
+          <input type="button" value="√" onclick="onClick('√(')" />
           <input type="button" value="(" onclick="onClick('(')" />
           <input type="button" value=")" onclick="onClick(')')" />
           <input type="button" value="%" onclick="onClick('%')" />
@@ -56,6 +46,18 @@
           <input type="button" value="/" onclick="onClick('/')" />
           <input type="button" value="0" onclick="onClick('0')" />
           <input type="button" value="." onclick="onClick('.')" />
+          <input type="button" value="=" onclick="calculate()" />
+          <input
+            type="button"
+            value="Clear all"
+            class="calc-clear"
+            onclick="
+              document.getElementById('calc-result').innerHTML ='';
+              document.getElementById('calc-operations').innerHTML ='';
+              document.getElementById('calc-operations').style.opacity =1;
+              document.getElementsByName('calculator').operation = ''; 
+            "
+          />
           <input type="button" value="=" onclick="calculate()" />
         </form>
       </div>
